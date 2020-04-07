@@ -1,8 +1,8 @@
-if CLIENT then
-	SWEP.PrintName = "Elites"
-	SWEP.Slots = 2
-	SWEP.Slotpos = 0
-end
+SWEP.PrintName = "Dual 96G Elite Berettas"
+SWEP.Slots = 2
+SWEP.Slotpos = 0
+SWEP.Category = "CSS Weapons"
+SWEP.Spawnable = true
 
 SWEP.Primary.Damage = 12.5
 SWEP.Primary.Delay = 0.1
@@ -21,7 +21,6 @@ SWEP.Secondary.ClipSize = 99999
 SWEP.Secondary.DefaultClip = 99999
 
 SWEP.HoldType = 'duel'
-
 SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_elite.mdl"
 SWEP.ViewModelFov = 62
@@ -29,7 +28,6 @@ SWEP.WorldModel = "models/weapons/cstrike/w_pist_elite.mdl"
 
 function SWEP:Initialize() 
 	self:SetWeaponHoldType(self.HoldType)
-
 end
 
 function SWEP:PrimaryAttack()
@@ -42,7 +40,6 @@ function SWEP:PrimaryAttack()
     self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
     self:TakePrimaryAmmo(1)
     self.Owner:ViewPunch(Angle(math.Rand(-0.2, -0.1) * self.Primary.Recoil, math.Rand(-0.1, 0.1) * self.Primary.Recoil, 0))
-
 end
 
 function SWEP:SecondaryAttack()
@@ -55,12 +52,10 @@ function SWEP:SecondaryAttack()
     self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
     self:TakeSecondaryAmmo(1)
     self.Owner:ViewPunch(Angle(math.Rand(-0.2, -0.1) * self.Primary.Recoil, math.Rand(-0.1, 0.1) * self.Primary.Recoil, 0))
-
 end
 
 function SWEP:Reload()
     self:DefaultReload(ACT_VM_RELOAD)
-
 end
 
 function SWEP:ShootBullet(damage, numbullets, aimcone)
@@ -75,9 +70,8 @@ function SWEP:ShootBullet(damage, numbullets, aimcone)
 	bullet.Damage	= math.Round(damage)
 	bullet.AmmoType = self.Primary.Ammo
 	bullet.Tracer = 0
+
 	self.Owner:FireBullets(bullet)
-    
 	self.Owner:MuzzleFlash()
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
-
 end
