@@ -1,8 +1,5 @@
+SWEP.Base = "weapon_css_pistol-base"
 SWEP.PrintName = "Dual 96G Elite Berettas"
-SWEP.Slots = 2
-SWEP.Slotpos = 0
-SWEP.Category = "CSS Weapons"
-SWEP.Spawnable = true
 
 SWEP.Primary.Damage = 12.5
 SWEP.Primary.Delay = 0.1
@@ -20,11 +17,10 @@ SWEP.Primary.Automatic = false
 SWEP.Secondary.ClipSize = 99999
 SWEP.Secondary.DefaultClip = 99999
 
-SWEP.HoldType = 'duel'
 SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_elite.mdl"
 SWEP.ViewModelFov = 62
-SWEP.WorldModel = "models/weapons/cstrike/w_pist_elite.mdl"
+SWEP.WorldModel = "models/weapons/w_pist_elite_single.mdl"
 
 function SWEP:Initialize() 
 	self:SetWeaponHoldType(self.HoldType)
