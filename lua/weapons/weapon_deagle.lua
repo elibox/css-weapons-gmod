@@ -2,6 +2,9 @@ SWEP.Base = 'weapon_css_pistol-base'
 SWEP.PrintName = "Desert Eagle.50 AE"
 SWEP.Spawnable = true
 
+SWEP.Slot = 2
+SWEP.Slotpos = 0
+
 SWEP.Primary.Damage = 45
 SWEP.Primary.Delay = 0.2
 SWEP.Primary.Recoil = 1
