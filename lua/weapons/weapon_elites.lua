@@ -1,6 +1,7 @@
 SWEP.Base = "weapon_css_pistol-base"
 SWEP.PrintName = "Dual 96G Elite Berettas"
 SWEP.Spawnable = true
+SWEP.Category = "CSS Weapons"
 
 SWEP.Slot = 2
 SWEP.Slotpos = 0
